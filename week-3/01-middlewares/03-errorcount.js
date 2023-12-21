@@ -38,7 +38,7 @@ app.get('/errorCount', function(req, res) {
   res.status(200).json({ errorCount });
 });
 
-app.use("/", invalidRouteHandlerMiddleware);
+
 
 app.use(errorHandlerMiddleware);
 
