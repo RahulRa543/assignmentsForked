@@ -17,7 +17,7 @@ setInterval(() => {
 }, 1000)
 
 app.use((req,res,next)=>{
-  const user_id = req.headers.user_id;
+  const user_Id = req.headers.user_id;
   if (numberOfRequestsForUser[userId] && numberOfRequestsForUser[userId] >= 5) {
     return res.status(404).json({ error: "Rate limit exceeded. Too many requests." });
   }
